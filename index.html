@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <title>Rad sa artiklima</title>
+</head>
+<body class="bg-light">
+<div class="container">
+    <h1 class="text-dark mt-3">Rad sa artiklima</h1>
+    <form id="myForm">
+     <div class="form-row">
+        <div class="form-group col-md-6 mb-3">
+            <label for="barkod">Barkod:*</label>
+            <input type="number" id="barkod" name="barkod" class="form-control" placeholder="Unesi barkod artikla...">
+        </div>
+        <div class="form-group col-md-6 mb-3">
+            <label for="naziv">Naziv:*</label>
+            <input type="text" id="naziv" name="naziv" class="form-control" placeholder="Unesi naziv artikla...">
+        </div>
+    </div>
+        <div class= "form-group mb-3">
+            <label for="opis_artikla">Opis artikla</label>
+            <textarea class="form-control" id="opis_artikla" maxlength="200" placeholder="Ukratko opišite artikal..."></textarea>
+        </div>
+          <div class="form-group mb-3">
+              <label for="vrsta_artikla">Vrsta artikla:*</label>
+                <select class="custom-select required" id="vrsta_artikla">
+                    <option disabled selected>-----</option>
+                    <option value="1">Papirna galanterija</option>
+                    <option value="2">Vlažne maramice</option>
+                    <option value="3">Kozmetika</option>
+                </select>
+          </div>
+
+          <div class="form-row mb-3">
+                <div class="form-group col-md-6">
+                    <label for="cena">Cena:*</label>
+                    <input type="number" name="cena" id="cena" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cena_PDV">Cena sa PDV-om:*</label>
+                    <input type="number" name="cena_PDV" id="cena_PDV" class="form-control" disabled> 
+                </div>
+            </div>
+        <div>
+    <fieldset>
+        <legend>Slika</legend>
+            <input type="file" id="image" accept="image/png" onchange="loadFile(event)" src="#" alt="Choose file">
+            <br>
+            <img id="slika" width="300px" height="auto">
+    </fieldset>
+        </div>
+        <div>
+            <button id="button" type="button" class="btn btn-dark mt-4" onclick="productUpdate();">Unesi podatke</button>
+        </div>    
+    </form>
+    
+    <fieldset class="tabela mt-3">
+        <legend>Tabela sa podacima</legend>
+        <div class="input-group m-3 row">
+            <div class="searchInput input-group-prepend">
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+            </div>
+            <input type="search" id="search" class="form-control col-3" onkeyup="searchName()" placeholder="Pretraga po nazivu...">
+        </div>
+    </fieldset>
+    <div class="table-responsive">
+        <table id="table" class="table table-striped table-bordered table-danger">
+            <tr>
+                <th scope="col">Barkod</th>
+                <th scope="col">Naziv</th>
+                <th scope="col">Opis artikla</th>
+                <th scope="col">Vrsta artikla</th>
+                <th scope="col">Cena</th>
+                <th scope="col">Cena sa PDV-om</th>
+                <th scope="col">Slika</th>
+                <th scope="col">Datum i vreme</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="JS/main.js"></script>
+</body>
+</html>

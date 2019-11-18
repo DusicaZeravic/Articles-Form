@@ -1,0 +1,38 @@
+
+input[type=text]:focus { 
+    border-color: rgb(11, 87, 168);
+    box-shadow: 0 0 10px #719ECE;
+}
+input[type=number]:focus { 
+    border-color: rgb(11, 87, 168);
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#opis_artikla:focus { 
+    border-color: rgb(11, 87, 168);
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#vrsta_aritkla:focus {
+    border-color: rgb(11, 87, 168);
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.btn {
+    margin-left: 88%;
+}
+
+#slika {
+    margin-top: 5%; 
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-spacing: 1em 0;
+}
+
+.searchInput {
+  margin-left: -15px;
+}
+
